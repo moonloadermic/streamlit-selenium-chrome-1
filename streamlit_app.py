@@ -28,7 +28,7 @@ with st.echo():
     options.add_argument('--headless')
 
     driver = get_driver()
-    driver.get('https://replit.com/')
+    driver.get('https://github.com/')
     time.sleep(2)
     st.write(driver.title)
 
