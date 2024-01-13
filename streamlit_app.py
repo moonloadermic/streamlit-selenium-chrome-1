@@ -26,9 +26,13 @@ with st.echo():
     options = Options()
     options.add_argument('--disable-gpu')
     options.add_argument('--headless')
+    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 S```afari/537.36'
+    options.add_argument(f'user-agent={user_agent}')
+    options.add_experimental_option("excludeSwitches",['enable-automation'])
+    options.add_experimental_option('useAutomationExtension', False)
 
     driver = get_driver()
-    driver.get('https://github.com/')
+    driver.get('https://replit.com/')
     time.sleep(2)
     st.write(driver.title)
 
